@@ -1,0 +1,12 @@
+/target
+**/*.rs.bk
+bin/
+pkg/
+screenshots/
+wasm-pack.log
+node_modules
+dist
+.vite
+
+Cargo.lock
+package-lock.json

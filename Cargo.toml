@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/calculator-core",
+    "crates/calculator-wasm",
+]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["rgbav"]
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/rgbav/rust-wasm-calculator"
+
+[profile.release]
+opt-level = "s"

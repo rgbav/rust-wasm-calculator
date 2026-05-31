@@ -1,0 +1,24 @@
+[package]
+name = "calculator-wasm"
+description = "wasm-bindgen bindings exposing calculator-core to JavaScript."
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+calculator-core = { path = "../calculator-core" }
+wasm-bindgen = "0.2.84"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.34"
+
+# The `wasm-opt` binary shipped with wasm-pack is too old to parse the
+# multi-table Wasm emitted by current wasm-bindgen. Disable it until wasm-pack
+# bundles a newer Binaryen release.
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
