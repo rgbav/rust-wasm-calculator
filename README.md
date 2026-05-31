@@ -1,4 +1,4 @@
-# wasm-basic-calculator
+# rust-wasm-calculator
 
 A basic calculator that evaluates arithmetic expressions in Rust,
 compiled to WebAssembly, and called from a React + TypeScript frontend.
